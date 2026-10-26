@@ -22,54 +22,51 @@
 // PrintStudentCard("Егор", 18, "ИСП-251");
 // PrintStudentCard("Валерия", 17, "ИСП-255");
 
-double result;
+// Задача Б
+// void PrintPerson(string name, int age)
+// {
+//     Console.WriteLine($"Имя: {name}");
+//     Console.WriteLine($"Возраст: {age}");
+// }
+// PrintPerson("Семён", 17);
+// PrintPerson("Иван", 18);
+// PrintPerson("Леонид", 16);
+// // Задача B
+// bool IsEven(int number)
+// {
+//     if (number % 2 == 0)
+//     {
+//         return true;
+//     }
+//     else
+//     {
+//         return false;
+//     }
+// }
+// int testNumber = 2;
 
-if (IsEligibleForBonus(4.7)) {
-    result = CalculateScholarship(2000, 15);
-} else {
-    result = CalculateScholarship(2000, 0);
-}
-
-Console.WriteLine(result);
-
-
-
-double CalculateScholarship(double baseAmount, double bonusPercent) {
-    return baseAmount + baseAmount * bonusPercent / 100;
-}
-
-bool IsEligibleForBonus(double averageGrade) {
-    return averageGrade >= 4.5;
-}
-
-double CalculateAverageGrade(int[] grades)
+// if (IsEven(testNumber))
+// {
+//     Console.WriteLine($"Число {testNumber} — чётное");
+// }
+// else
+// {
+//     Console.WriteLine($"Число {testNumber} — нечётное");
+// }
+// 2
+double CalculateArea(double width, double height)
 {
-    int sum = 0;
-    foreach (int grade in grades)
-    {
-        sum += grade;
-    }
-    return (double)sum / grades.Length;
+    return width * height;
 }
-int CountFives(int[] grades)
-{   int c = 0;
-    foreach (int i in grades)
-    {
-        if (i == 5)
-        {
-            c += 1;
-        }
-    }
-    return c;
+double area = CalculateArea(4, 7);
+Console.WriteLine(area);
+// 5
+double CalculateBmi(double weight, double heightMeters)
+{
+    return weight / (heightMeters * heightMeters);
 }
-int[] grades = { 4, 5, 3, 5, 4 };
-double average = CalculateAverageGrade(grades);
-int averages = CountFives(grades);
-Console.WriteLine(averages);
-Console.WriteLine(average);
-
-
-
+double w = CalculateBmi(80, 1.8);
+Console.WriteLine(w);
 
 
 
